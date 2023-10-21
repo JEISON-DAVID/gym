@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <title>GYM MASTER SERVICIOS</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="user-info">
+                <span>USUARIO</span>
+            </div>
+<div class="perfil-content">
+              <a class="perfil" href="perfil.html">perfil</a>
+              <a href=" ../index.html">Cerrar Sesión</a>
+  
+</div>
+        </nav>
+    </header>
+    <div class="titulo-container">
+      <h2>NUESTROS SERVICIOS</h2>
+      
+    </div>
+    <section>
+<div class="services-grid">
+    <div class="service">
+        <img src="../imágenes/YOGA.png" alt="Servicio 1">
+        <h2>YOGA</h2>
+        <p>El yoga es una práctica milenaria que combina posturas, respiración y meditación para mejorar la flexibilidad y la relajación. Únete a nuestras clases para encontrar paz y equilibrio interior.</p>
+    </div>
+    <div class="service">
+        <img src="../imágenes/entrenador-personal.png" alt="Servicio 2">
+        <h2>ENTRENADOR PERSONAL</h2>
+        <p>Nuestros entrenadores personales te ayudarán a alcanzar tus metas de fitness. Diseñarán un plan de ejercicios personalizado y te guiarán hacia un estilo de vida más saludable.</p>
+    </div>
+    <div class="service">
+        <img src="../imágenes/nutrición.png" alt="Servicio 3">
+        <h2>NUTRICIÓN</h2>
+        <p>La nutrición adecuada es esencial para una vida saludable. Nuestros expertos en nutrición te ayudarán a crear una dieta equilibrada y a adoptar hábitos alimenticios saludables.</p>
+    </div>
+    <div class="service">
+        <img src="../imágenes/bajar-peso.jpg" alt="Servicio 4">
+        <h2>BAJA DE PESO</h2>
+        <p>Si estás buscando perder peso de manera efectiva, nuestro programa de pérdida de peso te brinda las herramientas y el apoyo necesario para alcanzar tus objetivos de forma segura.</p>
+    </div>
+    <div class="service">
+        <img src="../imágenes/musculo.png" alt="Servicio 5">
+        <h2>AUMENTO DE MUSCULATURA</h2>
+        <p>Nuestros entrenadores te ayudarán a ganar masa muscular de manera efectiva. Te proporcionaremos rutinas de entrenamiento específicas para alcanzar tus objetivos de musculación.</p>
+    </div>
+    <div class="service">
+        <img src="../imágenes/-pliometricos.jpg" alt="Servicio 6">
+        <h2>PLIOMETRÍA</h2>
+        <p>La pliometría es un entrenamiento explosivo que mejora la fuerza y la agilidad. Nuestras clases de pliometría te ayudarán a alcanzar un mejor rendimiento atlético.</p>
+    </div>
+    <div class="service">
+        <img src="../imágenes/taikondow.png" alt="Servicio 7">
+        <h2>TAIKWONDO</h2>
+        <p>El Taekwondo es una disciplina marcial que combina habilidades de combate y desarrollo personal. Únete a nuestras clases para aprender autodefensa y disciplina.</p>
+    </div>
+    <div class="service">
+        <img src="../imágenes/calorias.jpg" alt="Servicio 8">
+        <h2>CALORÍAS</h2>
+        <p>El control de calorías es esencial para mantener un peso saludable. Nuestros expertos te ayudarán a monitorear y gestionar tu ingesta calórica de manera efectiva.</p>
+    </div>
+    <div class="service">
+        <img src="../imágenes/proteinas.png" alt="Servicio 9">
+        <h2>PROTEÍNAS</h2>
+        <p>Las proteínas son fundamentales para el crecimiento muscular y la recuperación. Descubre cómo incorporar las proteínas adecuadas en tu dieta diaria.</p>
+    </div>
+</div>
+
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const updateUsernameBtn = document.getElementById("updateUsername");
+    const newUsernameInput = document.getElementById("newUsername");
+    const userInfoSpan = document.querySelector("#user-info span");
+    const savedUsername = localStorage.getItem("username");
+
+    if (savedUsername) {
+        userInfoSpan.textContent = savedUsername;
+    }
+
+    updateUsernameBtn.addEventListener("click", function () {
+        const newUsername = newUsernameInput.value;
+        userInfoSpan.textContent = newUsername;
+        newUsernameInput.value = "";
+
+        
+        localStorage.setItem("username", newUsername);
+        window.location.href = "../html/inicio.html";
+    });
+});
+
+    </script>
+</body>
+</html>

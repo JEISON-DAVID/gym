@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi perfil</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body>
+<nav class="profile-card">
+    <div id="user-info">
+        <img src="../imágenes/icono-perfil.png" alt="Foto de perfil">
+        <span>USUARIO</span>
+    </div>
+    <a href="#">Cerrar Sesión</a>
+</nav>
+    <form id="profileForm">
+        <input type="text" id="newUsername" placeholder="Nuevo nombre de usuario">
+        <button type="button" id="updateUsername">Actualizar nombre de usuario</button>
+    </form>
+
+    <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const updateUsernameBtn = document.getElementById("updateUsername");
+    const newUsernameInput = document.getElementById("newUsername");
+    const userInfoSpan = document.querySelector("#user-info span");
+
+    
+    const savedUsername = localStorage.getItem("username");
+
+    if (savedUsername) {
+        userInfoSpan.textContent = savedUsername;
+    }
+
+    updateUsernameBtn.addEventListener("click", function () {
+        const newUsername = newUsernameInput.value;
+        userInfoSpan.textContent = newUsername; 
+        newUsernameInput.value = ""; 
+        localStorage.setItem("username", newUsername);
+
+        
+        window.location.href = "../html/inicio.html";
+    });
+});
+
+    </script>
+</body>
+</html>
